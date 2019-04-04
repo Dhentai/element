@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const utils = require('./utils');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -21,9 +22,9 @@ const webpackConfig = {
   } : (isPlay ? './examples/play.js' : './examples/entry.js'),
   output: {
     path: path.resolve(process.cwd(), './examples/element-ui/'),
-    publicPath: process.env.CI_ENV || 'cmn',
-    filename: '[name].[hash:7].js',
-    chunkFilename: isProd ? '[name].[hash:7].js' : '[name].js'
+    publicPath: process.env.CI_ENV || '',
+    filename: utils.assetsPath('js/[name].[hash:7].js'),
+    chunkFilename: isProd ? utils.assetsPath('js/[name].[hash:7].js') : utils.assetsPath('js/[name].js')
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
@@ -33,8 +34,8 @@ const webpackConfig = {
   devServer: {
     host: '0.0.0.0',
     port: 8085,
-    publicPath: '/',
-    noInfo: true
+    publicPath: '/', // output.path 的虚拟路径映射
+    noInfo: true // 不输出启动 log
   },
   performance: {
     hints: false
@@ -95,7 +96,7 @@ const webpackConfig = {
         // todo: 这种写法有待调整
         query: {
           limit: 10000,
-          name: path.posix.join('static', '[name].[hash:7].[ext]')
+          name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
       }
     ]
@@ -139,7 +140,7 @@ if (isProd) {
   };
   webpackConfig.plugins.push(
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash:7].css'
+      filename: utils.assetsPath('css/[name].[contenthash:7].css')
     })
   );
   webpackConfig.optimization.minimizer.push(

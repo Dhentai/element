@@ -47,3 +47,11 @@ exports.vue = {
 };
 
 exports.jsexclude = /node_modules|utils\/popper\.js|utils\/date.\js/;
+
+exports.dev = {
+  assetsSubDirectory: 'static'
+};
+
+exports.build = {
+  assetsSubDirectory: 'static'
+};

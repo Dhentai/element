@@ -422,8 +422,8 @@
       }
     },
     mounted() {
-      const host = location.hostname;
-      this.showThemeConfigurator = host.match('localhost') || host.match('elenet');
+      // const host = location.hostname;
+      // this.showThemeConfigurator = host.match('localhost') || host.match('elenet');
       if (!this.showThemeConfigurator) {
         getVars()
           .then(() => {

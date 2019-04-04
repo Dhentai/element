@@ -17,9 +17,9 @@
     </script>
     <div id="app"></div>
     <% if (process.env.NODE_ENV === 'production') { %>
-      <script src="//shadow.elemecdn.com/npm/vue@2.5.16/dist/vue.runtime.min.js"></script>
-      <script src="//shadow.elemecdn.com/npm/vue-router@3.0.1/dist/vue-router.min.js"></script>
-      <script src="//shadow.elemecdn.com/app/element/highlight.pack.b1f71b31-3c07-11e9-ba1a-55bba1877129.js"></script>
+      <script src="./resource/vue@2.5.16_vue.runtime.min.js"></script>
+      <script src="./resource/vue-router@3.0.1_vue-router.min.js"></script>
+      <script src="./resource/highlight.pack.b1f71b31-3c07-11e9-ba1a-55bba1877129.js"></script>
     <% } %>
   </body>
   <% if (process.env.NODE_ENV === 'production') { %><script>
