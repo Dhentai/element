@@ -21,7 +21,7 @@ const webpackConfig = {
   } : (isPlay ? './examples/play.js' : './examples/entry.js'),
   output: {
     path: path.resolve(process.cwd(), './examples/element-ui/'),
-    publicPath: process.env.CI_ENV || '',
+    publicPath: process.env.CI_ENV || 'cmn',
     filename: '[name].[hash:7].js',
     chunkFilename: isProd ? '[name].[hash:7].js' : '[name].js'
   },
@@ -107,7 +107,11 @@ const webpackConfig = {
       favicon: './examples/favicon.ico'
     }),
     new CopyWebpackPlugin([
-      { from: 'examples/versions.json' }
+      { from: 'examples/versions.json' },
+      {
+        from: 'examples/resource',
+        to: 'resource'
+      }
     ]),
     new ProgressBarPlugin(),
     new VueLoaderPlugin(),
