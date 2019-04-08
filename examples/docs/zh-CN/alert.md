@@ -1,6 +1,20 @@
 ## Alert 警告
 
-用于页面中展示重要的提示信息。
+用于页面中展示重要的提示信息cmn。
+
+### TEST
+
+页面中的非浮层元素，不会自动消失。
+
+:::demo Rua
+```html
+<template>
+  <div class="rsndm">
+    rsndm
+  </div>
+</template>
+```
+:::
 
 ### 基本用法
 

@@ -2,6 +2,18 @@
 
 出现在按钮、图标旁的数字或状态标记。
 
+### TEST
+展示新消息数量。
+
+:::demo 定义`value`属性，它接受`Number`或者`String`。
+
+```html
+    <div class="rsndm">
+        wdnmd
+    </div>
+```
+:::
+
 ### 基础用法
 展示新消息数量。
 

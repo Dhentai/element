@@ -86,6 +86,9 @@
     .nav-logo-small {
       vertical-align: sub;
     }
+    .nav-logo{
+      width: 146px;
+    }
 
     .nav-logo-small {
       display: none;
@@ -273,7 +276,7 @@
           <!-- logo -->
           <slot>
             <img
-              src="../assets/images/element-logo.svg"
+              src="../assets/images/firefly-logo.svg"
               alt="element-logo"
               class="nav-logo">
             <img
@@ -286,7 +289,7 @@
 
         <!-- nav -->
         <ul class="nav">
-          <li class="nav-item nav-algolia-search" v-show="isComponentPage">
+          <li class="nav-item nav-algolia-search" v-show="!inLocal">
             <algolia-search></algolia-search>
           </li>
           <li class="nav-item">
@@ -315,7 +318,7 @@
           </li>
 
           <!-- 版本选择器 -->
-          <li class="nav-item nav-versions" v-show="isComponentPage">
+          <li class="nav-item nav-versions" v-show="!inLocal">
             <el-dropdown
               trigger="click"
               class="nav-dropdown"
@@ -339,7 +342,7 @@
           </li>
 
           <!-- 语言选择器 -->
-          <li class="nav-item lang-item">
+          <li class="nav-item lang-item" v-show="!inLocal">
             <el-dropdown
               trigger="click"
               class="nav-dropdown nav-lang"
@@ -381,6 +384,8 @@
   import { getVars } from './theme-configurator/utils/api.js';
   import bus from '../bus';
 
+  import { inLocal } from 'examples/pageOption';
+
   const { version } = Element;
 
   export default {
@@ -397,7 +402,8 @@
           'es': 'Español',
           'fr-FR': 'Français'
         },
-        showThemeConfigurator: false
+        showThemeConfigurator: false,
+        inLocal
       };
     },
 

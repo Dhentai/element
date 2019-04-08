@@ -1,18 +1,35 @@
+## 介绍 Firefly
+本节介绍为何要推出 Firefly
+
+### 背景
+- 一、目前前端处于方兴未艾的阶段，对于前端开发人员来说，无论是入行还是进阶，也还算最佳的时候。
+- 二、2017前端市场的火热度
+    - PWA（Progressive Web Apps 渐进式网络应用技术  由谷歌提出用前沿的技术开发，让网页使用如同APP般的体验的一系列方案 同事宣布PWA将获得与安卓原生应用同等待遇的体验）
+    - typeScript （它是javaScript的一个超集 添加了静态类型和真正基于类的面向对象编程）
+    - webpack (简单的来说就是javaScript的模块打包工具  替代gulp 等自动构建工具)
+    - 前端MVVM框架的BBA，react/vue/angular.
+    - 页面布局的简单化 flex布局方式替代 传统 float 、 inline-block布局。
+    - 其他方面 微信小程序，在今年是大爆炸。
+- 三、Firefly使用了哪些开源技术栈
+    - vux 2.x    （基础MVVM框架）
+    - ES6        （目前javaScript的新标准）
+    - vue-router （vue路由相关插件）
+    - vuex       （vue全局状态管理插件）
+    - axios      （基于promise的HTTP库）
+    - sass       （css的预处理）
+    - webpack 3  （前端工程模块打包工具）
+- 四、与之前oasisl的比较 前端技术栈脱离不了两个层次。场景边界与开发效率。
+    - 不认为"vue全家桶技术栈"就比 "jQuery全家桶技术栈"强。一切都是考虑技术场景，谁比谁适合的问题
+    - 1.开发效率，按照项目的需求来确定场景，是否需要考虑前后端分离、是否考虑seo。项目需求的可迭代程度，项目的大小。（比如一个简单的活动页面就不需要开发一堆一次性的vue组件）
+    - 2.持续集成，一旦有项目，那么就存在，上线，修复BUG，合作，甚至交接。那么在目前前后端分离，前端工程化的前提下，一个可持续集成工程化项目架构就非常重要的，那么项目架构和技术栈往往密不可分。
+    - 3.所以，jQuery也好，vue也好，只不过是我们目前时代的产物。只有把底层技术打扎实，任何框架又何惧。我们只是大自然的搬运工。
+- 五、未来可能考虑的场景
 ## 快速上手
 
-本节将介绍如何在项目中使用 Element。
+本节将介绍如何在项目中使用 Firefly。
 
-### 使用 vue-cli@3
 
-我们为新版的 vue-cli 准备了相应的 [Element 插件](https://github.com/ElementUI/vue-cli-plugin-element)，你可以用它们快速地搭建一个基于 Element 的项目。
-
-### 使用 Starter Kit
-
-我们提供了通用的[项目模板](https://github.com/ElementUI/element-starter)，你可以直接使用。对于 Laravel 用户，我们也准备了相应的[模板](https://github.com/ElementUI/element-in-laravel-starter)，同样可以直接下载使用。
-
-如果不希望使用我们提供的模板，请继续阅读。
-
-### 引入 Element
+### 引入 Element （Firefly 基础组件基于 Element UI）
 
 你可以引入整个 Element，或是根据需要仅引入部分组件。我们先介绍如何引入完整的 Element。
 
@@ -36,32 +53,6 @@ new Vue({
 
 以上代码便完成了 Element 的引入。需要注意的是，样式文件需要单独引入。
 
-#### 按需引入
-
-借助 [babel-plugin-component](https://github.com/QingWei-Li/babel-plugin-component)，我们可以只引入需要的组件，以达到减小项目体积的目的。
-
-首先，安装 babel-plugin-component：
-
-```bash
-npm install babel-plugin-component -D
-```
-
-然后，将 .babelrc 修改为：
-
-```json
-{
-  "presets": [["es2015", { "modules": false }]],
-  "plugins": [
-    [
-      "component",
-      {
-        "libraryName": "element-ui",
-        "styleLibraryName": "theme-chalk"
-      }
-    ]
-  ]
-}
-```
 
 接下来，如果你只希望引入部分组件，比如 Button 和 Select，那么需要在 main.js 中写入以下内容：
 
@@ -82,166 +73,16 @@ new Vue({
   render: h => h(App)
 });
 ```
-
-完整组件列表和引入方式（完整组件列表以 [components.json](https://github.com/ElemeFE/element/blob/master/components.json) 为准）
-
-```javascript
-import Vue from 'vue';
-import {
-  Pagination,
-  Dialog,
-  Autocomplete,
-  Dropdown,
-  DropdownMenu,
-  DropdownItem,
-  Menu,
-  Submenu,
-  MenuItem,
-  MenuItemGroup,
-  Input,
-  InputNumber,
-  Radio,
-  RadioGroup,
-  RadioButton,
-  Checkbox,
-  CheckboxButton,
-  CheckboxGroup,
-  Switch,
-  Select,
-  Option,
-  OptionGroup,
-  Button,
-  ButtonGroup,
-  Table,
-  TableColumn,
-  DatePicker,
-  TimeSelect,
-  TimePicker,
-  Popover,
-  Tooltip,
-  Breadcrumb,
-  BreadcrumbItem,
-  Form,
-  FormItem,
-  Tabs,
-  TabPane,
-  Tag,
-  Tree,
-  Alert,
-  Slider,
-  Icon,
-  Row,
-  Col,
-  Upload,
-  Progress,
-  Badge,
-  Card,
-  Rate,
-  Steps,
-  Step,
-  Carousel,
-  CarouselItem,
-  Collapse,
-  CollapseItem,
-  Cascader,
-  ColorPicker,
-  Transfer,
-  Container,
-  Header,
-  Aside,
-  Main,
-  Footer,
-  Loading,
-  MessageBox,
-  Message,
-  Notification
-} from 'element-ui';
-
-Vue.use(Pagination);
-Vue.use(Dialog);
-Vue.use(Autocomplete);
-Vue.use(Dropdown);
-Vue.use(DropdownMenu);
-Vue.use(DropdownItem);
-Vue.use(Menu);
-Vue.use(Submenu);
-Vue.use(MenuItem);
-Vue.use(MenuItemGroup);
-Vue.use(Input);
-Vue.use(InputNumber);
-Vue.use(Radio);
-Vue.use(RadioGroup);
-Vue.use(RadioButton);
-Vue.use(Checkbox);
-Vue.use(CheckboxButton);
-Vue.use(CheckboxGroup);
-Vue.use(Switch);
-Vue.use(Select);
-Vue.use(Option);
-Vue.use(OptionGroup);
-Vue.use(Button);
-Vue.use(ButtonGroup);
-Vue.use(Table);
-Vue.use(TableColumn);
-Vue.use(DatePicker);
-Vue.use(TimeSelect);
-Vue.use(TimePicker);
-Vue.use(Popover);
-Vue.use(Tooltip);
-Vue.use(Breadcrumb);
-Vue.use(BreadcrumbItem);
-Vue.use(Form);
-Vue.use(FormItem);
-Vue.use(Tabs);
-Vue.use(TabPane);
-Vue.use(Tag);
-Vue.use(Tree);
-Vue.use(Alert);
-Vue.use(Slider);
-Vue.use(Icon);
-Vue.use(Row);
-Vue.use(Col);
-Vue.use(Upload);
-Vue.use(Progress);
-Vue.use(Badge);
-Vue.use(Card);
-Vue.use(Rate);
-Vue.use(Steps);
-Vue.use(Step);
-Vue.use(Carousel);
-Vue.use(CarouselItem);
-Vue.use(Collapse);
-Vue.use(CollapseItem);
-Vue.use(Cascader);
-Vue.use(ColorPicker);
-Vue.use(Transfer);
-Vue.use(Container);
-Vue.use(Header);
-Vue.use(Aside);
-Vue.use(Main);
-Vue.use(Footer);
-
-Vue.use(Loading.directive);
-
-Vue.prototype.$loading = Loading.service;
-Vue.prototype.$msgbox = MessageBox;
-Vue.prototype.$alert = MessageBox.alert;
-Vue.prototype.$confirm = MessageBox.confirm;
-Vue.prototype.$prompt = MessageBox.prompt;
-Vue.prototype.$notify = Notification;
-Vue.prototype.$message = Message;
-```
-
 ### 全局配置
 
-在引入 Element 时，可以传入一个全局配置对象。该对象目前支持 `size` 与 `zIndex` 字段。`size` 用于改变组件的默认尺寸，`zIndex` 设置弹框的初始 z-index（默认值：2000）。按照引入 Element 的方式，具体操作如下：
+在引入 Element 时，可以传入一个全局配置对象。该对象目前仅支持 `size` 字段，用于改变组件的默认尺寸。按照引入 Element 的方式，具体操作如下：
 
 完整引入 Element：
 
 ```js
 import Vue from 'vue';
 import Element from 'element-ui';
-Vue.use(Element, { size: 'small', zIndex: 3000 });
+Vue.use(Element, { size: 'small' });
 ```
 
 按需引入 Element：
@@ -250,21 +91,15 @@ Vue.use(Element, { size: 'small', zIndex: 3000 });
 import Vue from 'vue';
 import { Button } from 'element-ui';
 
-Vue.prototype.$ELEMENT = { size: 'small', zIndex: 3000 };
+Vue.prototype.$ELEMENT = { size: 'small' };
 Vue.use(Button);
 ```
 
-按照以上设置，项目中所有拥有 `size` 属性的组件的默认尺寸均为 'small'，弹框的初始 z-index 为 3000。
+按照以上设置，项目中所有拥有 `size` 属性的组件的默认尺寸均为 'small'。
 
 ### 开始使用
 
 至此，一个基于 Vue 和 Element 的开发环境已经搭建完毕，现在就可以编写代码了。各个组件的使用方法请参阅它们各自的文档。
 
-### 使用 Nuxt.js
 
-我们还可以使用 [Nuxt.js](https://nuxtjs.org)：
-
-<div class="glitch-embed-wrap" style="height: 420px; width: 100%;">
-  <iframe src="https://glitch.com/embed/#!/embed/nuxt-with-element?path=nuxt.config.js&previewSize=0&attributionHidden=true" alt="nuxt-with-element on glitch" style="height: 100%; width: 100%; border: 0;"></iframe>
-</div>
 
