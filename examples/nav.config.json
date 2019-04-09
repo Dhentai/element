@@ -45,7 +45,8 @@
           "list": [
             {
               "path": "/layout",
-              "title": "Layout 布局"
+              "title": "Layout 布局",
+              "disabled": true
             },
             {
               "path": "/container",

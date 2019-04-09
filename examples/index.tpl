@@ -7,12 +7,12 @@
     <link rel='mask-icon' href="./resource/element-logo-small.svg" color="#409EFF">
     <link rel="stylesheet" href="./resource/highlight.js@9.3.0-styles-color-brewer.css">
     <title>Firefly</title>
-    <meta name="description" content="Element，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库" />
+    <meta name="description" content="Firefly，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库" />
   </head>
   <body>
     <script>
       if (!window.Promise) {
-        document.write('<script src="//cdn.jsdelivr.net/npm/es6-promise@4.1.1/dist/es6-promise.min.js"><\/script><script>ES6Promise.polyfill()<\/script>')
+        document.write('<script src="./resource/es6-promise.min.js"><\/script><script>ES6Promise.polyfill()<\/script>')
       }
     </script>
     <div id="app"></div>

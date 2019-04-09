@@ -1,0 +1,16 @@
+.installation-link .card {
+  width: 100%;
+  background:#ffffff;
+  border:1px solid #eaeefb;
+  border-radius:5px;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  transition: bottom .3s;
+  bottom: 0;
+
+  button{
+    height: 42px;
+    width: 190px;
+  }
+}

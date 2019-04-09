@@ -96,6 +96,19 @@
       }
     }
 
+    .nav-item-dis:not(#weight) {
+      cursor: not-allowed;
+      text-decoration: none;
+      transition: .15s ease-out;
+      color: #999;
+      a {
+        color: #999;
+        &:hover {
+           color: #999;
+         }
+      }
+    }
+
     .nav-group__title {
       font-size: 12px;
       color: #999;
@@ -122,21 +135,21 @@
     :class="{ 'is-fade': isFade }"
     :style="navStyle">
     <ul>
-      <li class="nav-item sponsors">
-        <a>{{ lang === 'zh-CN' ? '赞助商' : 'Sponsors' }}</a>
-        <ul class="pure-menu-list sub-nav">
-          <li class="nav-item" v-show="lang !== 'zh-CN'">
-            <a href="https://tipe.io/?ref=element" target="_blank">
-              <img src="~examples/assets/images/tipe.svg" alt="tipe.io">
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="sponsor" href="https://www.duohui.cn/?utm_source=element&utm_medium=web&utm_campaign=element-index" target="_blank">
-              <img src="~examples/assets/images/duohui.svg" alt="duohui">
-            </a>
-          </li>
-        </ul>
-      </li>
+      <!--<li class="nav-item sponsors">-->
+        <!--<a>{{ lang === 'zh-CN' ? '赞助商' : 'Sponsors' }}</a>-->
+        <!--<ul class="pure-menu-list sub-nav">-->
+          <!--<li class="nav-item" v-show="lang !== 'zh-CN'">-->
+            <!--<a href="https://tipe.io/?ref=element" target="_blank">-->
+              <!--<img src="~examples/assets/images/tipe.svg" alt="tipe.io">-->
+            <!--</a>-->
+          <!--</li>-->
+          <!--<li class="nav-item">-->
+            <!--<a class="sponsor" href="https://www.duohui.cn/?utm_source=element&utm_medium=web&utm_campaign=element-index" target="_blank">-->
+              <!--<img src="~examples/assets/images/duohui.svg" alt="duohui">-->
+            <!--</a>-->
+          <!--</li>-->
+        <!--</ul>-->
+      <!--</li>-->
       <li
         class="nav-item"
         v-for="(item, key) in data"
@@ -154,7 +167,8 @@
           <li
             class="nav-item"
             v-for="(navItem, key) in item.children"
-            :key="key">
+            :key="key"
+            v-if="!navItem.disabled">
             <router-link
               class=""
               active-class="active"
@@ -163,6 +177,7 @@
               v-text="navItem.title || navItem.name">
             </router-link>
           </li>
+          <li class="nav-item nav-item-dis" v-else><a v-text="navItem.title || navItem.name"></a></li>
         </ul>
         <template v-if="item.groups">
           <div
@@ -175,7 +190,7 @@
               <li
                 class="nav-item"
                 v-for="(navItem, key) in group.list"
-                v-show="!navItem.disabled"
+                v-if="!navItem.disabled"
                 :key="key">
                 <router-link
                   active-class="active"
@@ -183,6 +198,7 @@
                   exact
                   v-text="navItem.title"></router-link>
               </li>
+              <!--<li  class="nav-item-dis" v-else v-text="navItem.title || navItem.name">-->
             </ul>
           </div>
         </template>

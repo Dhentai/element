@@ -15,15 +15,15 @@
     npm run build
 ```
 
-<div>
- <li>
-  <div class="card">
-    <a href="/nav/firefly/data/node-v6.0.0-x64.msi" download>node安装包下载</a>
-  </div>
-    </li>
- <li>
-  <div class="card">
-    <a href="http://192.168.100.10/tanyichao/UED-Firefly-cli" target="_blank">代码下载</a>
-  </div>
-</li>
+<div class="installation-link">
+  <el-row class="card hljs">
+    <a href="/nav/firefly/data/node-v6.0.0-x64.msi" download>
+        <el-button type="primary">node安装包下载</el-button>
+    </a>
+  </el-row>
+  <el-row class="card hljs">
+      <a href="http://192.168.100.10/tanyichao/UED-Firefly-cli" target="_blank">
+          <el-button type="primary">代码下载</el-button>
+      </a>
+  </el-row>
 </div>

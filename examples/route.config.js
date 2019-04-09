@@ -151,6 +151,8 @@ route.push({
 });
 
 let userLanguage = localStorage.getItem('ELEMENT_LANGUAGE') || window.navigator.language || 'en-US';
+console.log('userLanguage', userLanguage);
+
 let defaultPath = '/en-US';
 if (userLanguage.indexOf('zh-') !== -1) {
   defaultPath = '/zh-CN';

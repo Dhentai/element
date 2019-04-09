@@ -1,11 +1,28 @@
 ## Alert 警告
 
-用于页面中展示重要的提示信息cmn。
+用于页面中展示重要的提示信息。
 
 ### TEST
+<mark>页面中的非浮层元素，不会自动消失cmn。</mark></br>
+[点击跳转至百度](http://www.baidu.com)
+![图片]()
+* 段落一
+    > 区块标记一
+* 段落二
+    > 区块标记二
+    
+*    段落一s
 
-页面中的非浮层元素，不会自动消失。
+     小段一
+*    段落二
 
+     小段二    
+     
+     sssss
+`fun (x: Int, y: Int): Int {
+  return x + y
+}`
+sssss
 :::demo Rua
 ```html
 <template>
