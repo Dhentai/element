@@ -71,6 +71,9 @@ import Main from '../packages/main/index.js';
 import Footer from '../packages/footer/index.js';
 import Timeline from '../packages/timeline/index.js';
 import TimelineItem from '../packages/timeline-item/index.js';
+import RelationGraph from '../packages/relation-graph/index.js';
+import Moments from '../packages/moments/index.js';
+import FhMap from '../packages/fh-map/index.js';
 import locale from 'element-ui/src/locale';
 import CollapseTransition from 'element-ui/src/transitions/collapse-transition';
 
@@ -142,6 +145,9 @@ const components = [
   Footer,
   Timeline,
   TimelineItem,
+  RelationGraph,
+  Moments,
+  FhMap,
   CollapseTransition
 ];
 
@@ -251,5 +257,8 @@ export default {
   Main,
   Footer,
   Timeline,
-  TimelineItem
+  TimelineItem,
+  RelationGraph,
+  Moments,
+  FhMap
 };

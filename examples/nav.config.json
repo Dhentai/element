@@ -254,6 +254,23 @@
               "title": "Timeline 时间线"
             }
           ]
+        },
+        {
+          "groupName": "第三方集成",
+          "list": [
+            {
+              "path": "/FH-map",
+              "title": "FH-map gis地图集成"
+            },
+            {
+              "path": "/relational-graph",
+              "title": "人员关系图组件"
+            },
+            {
+              "path": "/moments",
+              "title": "朋友圈组件"
+            }
+          ]
         }
       ]
     }

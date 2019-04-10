@@ -10,6 +10,7 @@
     <meta name="description" content="Firefly，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库" />
   </head>
   <body>
+    <script src="http://192.168.100.28:9150/FHGis/api/js" type="text/javascript"></script>
     <script>
       if (!window.Promise) {
         document.write('<script src="./resource/es6-promise.min.js"><\/script><script>ES6Promise.polyfill()<\/script>')
