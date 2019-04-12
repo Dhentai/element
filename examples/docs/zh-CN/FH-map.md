@@ -4,16 +4,14 @@
 ### 基本用法
 
 在index.html中引入 其中http://192.168.3.8:9150 是当前FGis地图文件地址
-```javascript
+```html
 <script src="http://192.168.3.8:9150/FHGis/api/js" type="text/javascript"></script>
 ```
 在使用组件文件内引用
 :::demo
 ```html
 <template>
-    <div class="activety-index">
-      <FHMap v-model="mapPoint" :isLine="isLine" :lineListData="lineListData"></FHMap>
-    </div>
+  <FHMap v-model="mapPoint" :isLine="isLine" :lineListData="lineListData"></FHMap>
 </template>
 
 <script>
@@ -32,23 +30,14 @@
         }
       },
       computed: {
-
       },
       created() {
-
+        console.log('FHMap Doc')
       }
     }
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-  .activety-index{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-  }
 </style>
 
 ```

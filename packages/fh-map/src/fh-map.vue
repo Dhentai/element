@@ -3,12 +3,15 @@
 */
 
 <template>
-    <div class="gis-map-index">
-        <div id="map-content" style="height:100%;width: 100%"></div>
+    <div class="activity-index">
+        <div class="gis-map-index"  @wheel="handleWheel($event)">
+            <div id="map-content" style="height:100%;width: 100%"></div>
+        </div>
     </div>
 </template>
 
 <script>
+    import loadFHMap from 'examples/customUtils/loadFHMap';
     export default {
       name: 'FHMap',
       componentName: 'FHMap',
@@ -40,7 +43,16 @@
       },
       computed: {},
       mounted() {
-        this.initMap(this.value);
+        loadFHMap.then((data) => {
+          // this.initMap(this.value);
+          const map = new FHMap.Map('map-content', {zoom: 13, selected: 'baidu.map'});
+          var lonLat = new FHMap.LonLat(118.79056, 32.057);
+          map.setCenter(lonLat);
+        });
+        const con = document.querySelector('.activity-index');
+        con.addEventListener('wheel', () => {
+          console.log('container');
+        });
       },
       methods: {
         _OnClickNetRecord(item, key) {
@@ -156,14 +168,30 @@
           if (this.isLine) {
             this.initMapLine();
           }
+        },
+        handleWheel(e) {
+    
+          console.log('enter');
+          e.stopPropagation();
+          e.preventDefault();
         }
       }
     };
 </script>
 
 <style rel="stylesheet/scss" lang="scss" scoped>
-    .gis-map-index {
+    .activity-index{
+        position: relative;
         width: 100%;
-        height: 100%;
+        height: 400px;
+    }
+    .gis-map-index {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 400px;
+        overflow: hidden;
     }
 </style>

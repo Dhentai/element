@@ -384,7 +384,7 @@
   import { getVars } from './theme-configurator/utils/api.js';
   import bus from '../bus';
 
-  import { inLocal } from 'examples/pageOption';
+  import { inLocal } from 'examples/customOption';
 
   const { version } = Element;
 

@@ -3,6 +3,11 @@
     "ga": true,
     "FHMap": true
   },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
   "plugins": ["html", "json"],
   "extends": "elemefe",
   "rules": {
