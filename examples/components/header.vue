@@ -342,7 +342,7 @@
           </li>
 
           <!-- 语言选择器 -->
-          <li class="nav-item lang-item" v-show="!inLocal">
+          <li class="nav-item lang-item" v-show="!inLocal || showLanguage">
             <el-dropdown
               trigger="click"
               class="nav-dropdown nav-lang"
@@ -403,6 +403,7 @@
           'fr-FR': 'Français'
         },
         showThemeConfigurator: false,
+        showLanguage: false,
         inLocal
       };
     },

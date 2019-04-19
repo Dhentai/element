@@ -26,6 +26,30 @@
 ```
 :::
 
+### 正常状态
+
+单选框正常状态。
+
+:::demo
+
+```html
+<template>
+  <el-radio class="fh-radio" v-model="radio" label="1">备选项</el-radio>
+  <el-radio class="fh-radio" v-model="radio" label="2">备选项</el-radio>
+</template>
+
+<script>
+  export default {
+    data () {
+      return {
+        radio: '1'
+      };
+    }
+  }
+</script>
+```
+:::
+
 ### 禁用状态
 
 单选框不可用的状态。

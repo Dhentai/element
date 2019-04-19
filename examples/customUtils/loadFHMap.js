@@ -1,8 +1,15 @@
+/**
+ *  按需引用FhMap
+ *  返回代表地图资源加载完成的一个Promise
+ *
+ *  @returns {Promise<any>}
+ */
+import Vue from 'vue';
 import axios from 'axios';
 import { FHMapServer } from 'examples/customOption';
 import loadScript from './loadScript';
 
-export default new Promise((res) => {
+export default new Promise((res, rej) => {
   axios.get(FHMapServer, {timeout: 1000}).then(({data}) => {
     const reg = /write\('(.*)'\);$/;
     const reg1 = /<script[^>]*?>(.*?)<\/script>/g;
@@ -28,5 +35,8 @@ export default new Promise((res) => {
         }
       }
     })();
+  }).catch((err) => {
+    Vue.prototype.$message.error('地图服务暂时不可用');
+    rej(err);
   });
 });

@@ -15,6 +15,7 @@ import 'packages/theme-chalk/src/index.scss';
 import './demo-styles/index.scss';
 import './assets/styles/common.css';
 import './assets/styles/fonts/style.css';
+import './assets/styles/theme-firefly/index.scss';
 
 Vue.use(Element);
 Vue.use(VueRouter);

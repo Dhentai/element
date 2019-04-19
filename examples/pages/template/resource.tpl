@@ -128,13 +128,13 @@
 <template>
   <div class="page-container page-resource">
     <h2><%= 1 ></h2>
-    <!--<div class="resource-placeholder">-->
-      <!--<img src="~examples/assets/images/resource-placeholder.svg" alt="">-->
-      <!--<h4><%= placeholder1 ></h4>-->
-      <!--<p><%= placeholder2 ></p>-->
-    <!--</div>-->
+    <div class="resource-placeholder">
+      <img src="~examples/assets/images/logo.png" alt="">
+      <h4><%= placeholder1 ></h4>
+      <p><%= placeholder2 ></p>
+    </div>
     
-    <p><%= placeholder2 ></p>
+    <!--<p><%= placeholder2 ></p>-->
     <div class="cards">
       <ul class="container">
         <li>
@@ -144,21 +144,44 @@
             <p><%= 4 ></p>
             <a
               onclick="ga('send', 'event', 'ResourceDownload', 'Download', 'Axure');" 
-              href="https://github.com/ElementUI/Resources/raw/master/Element_Components_v2.0.0.rplib"
+              href="./resource/download/FireflyIconv1.0.rplib"
+            ><%= 5 ></a>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="~examples/assets/images/Axure-Components.svg" alt="">
+            <h3><%= 6 ></h3>
+            <p><%= 7 ></p>
+            <a 
+              onclick="ga('send', 'event', 'ResourceDownload', 'Download', 'Sketch');"
+              href="./resource/download/FireflyStandardv1.2.rplib"
+            ><%= 5 ></a>
+          </div>
+        </li>
+        <li>
+          <div class="card">
+            <img src="~examples/assets/images/Module.svg" alt="">
+            <h3><%= 11 ></h3>
+            <p><%= 12 ></p>
+            <a
+                    onclick="ga('send', 'event', 'ResourceDownload', 'Download', 'Sketch');"
+                    href="./resource/download/icon-imgs.zip"
             ><%= 5 ></a>
           </div>
         </li>
         <li>
           <div class="card">
             <img src="~examples/assets/images/Sketch-Template.svg" alt="">
-            <h3><%= 6 ></h3>
-            <p><%= 7 ></p>
-            <a 
-              onclick="ga('send', 'event', 'ResourceDownload', 'Download', 'Sketch');"
-              href="https://github.com/ElementUI/Resources/raw/master/Element%20UI%20Kit_v2.0.sketch"
+            <h3><%= 13 ></h3>
+            <p><%= 14 ></p>
+            <a
+                    onclick="ga('send', 'event', 'ResourceDownload', 'Download', 'Sketch');"
+                    href="./resource/download/Firefly-PPT.zip"
             ><%= 5 ></a>
           </div>
         </li>
+
         <!--<li>-->
           <!--<div class="card">-->
             <!--<img src="~examples/assets/images/Module.svg" alt="">-->
