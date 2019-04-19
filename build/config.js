@@ -46,7 +46,7 @@ exports.vue = {
   amd: 'vue'
 };
 
-exports.jsexclude = /node_modules|utils\/popper\.js|utils\/date.\js/;
+exports.jsexclude = /node_modules|utils\/popper\.js|utils\/date\.js/;
 
 exports.dev = {
   assetsSubDirectory: 'static'

@@ -252,6 +252,14 @@
             {
               "path": "/timeline",
               "title": "Timeline 时间线"
+            },
+            {
+              "path": "/divider",
+              "title": "Divider 分割线"
+            },
+            {
+              "path": "/image",
+              "title": "Image 图片"
             }
           ]
         },
@@ -527,6 +535,14 @@
             {
               "path": "/timeline",
               "title": "Timeline"
+            },
+            {
+              "path": "/divider",
+              "title": "Divider"
+            },
+            {
+              "path": "/image",
+              "title": "Image"
             }
           ]
         }
@@ -785,6 +801,14 @@
             {
               "path": "/timeline",
               "title": "Timeline"
+            },
+            {
+              "path": "/divider",
+              "title": "Divider"
+            },
+            {
+              "path": "/image",
+              "title": "Image"
             }
           ]
         }
@@ -1043,6 +1067,14 @@
             {
               "path": "/timeline",
               "title": "Timeline"
+            },
+            {
+              "path": "/divider",
+              "title": "Divider"
+            },
+            {
+              "path": "/image",
+              "title": "Image"
             }
           ]
         }

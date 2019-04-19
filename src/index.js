@@ -71,6 +71,8 @@ import Main from '../packages/main/index.js';
 import Footer from '../packages/footer/index.js';
 import Timeline from '../packages/timeline/index.js';
 import TimelineItem from '../packages/timeline-item/index.js';
+import Divider from '../packages/divider/index.js';
+import Image from '../packages/image/index.js';
 import RelationGraph from '../packages/relation-graph/index.js';
 import Moments from '../packages/moments/index.js';
 import FhMap from '../packages/fh-map/index.js';
@@ -145,6 +147,8 @@ const components = [
   Footer,
   Timeline,
   TimelineItem,
+  Divider,
+  Image,
   RelationGraph,
   Moments,
   FhMap,
@@ -257,6 +261,9 @@ export default {
   Main,
   Footer,
   Timeline,
+  TimelineItem,
+  Divider,
+  Image
   TimelineItem,
   RelationGraph,
   Moments,
