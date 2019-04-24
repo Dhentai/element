@@ -26,7 +26,7 @@
 ```
 :::
 
-### 正常状态
+### 基础用法(firefly)
 
 单选框正常状态。
 
@@ -34,8 +34,8 @@
 
 ```html
 <template>
-  <el-radio class="fh-radio" v-model="radio" label="1">备选项</el-radio>
-  <el-radio class="fh-radio" v-model="radio" label="2">备选项</el-radio>
+  <el-radio class="firefly" v-model="radio" label="1">备选项</el-radio>
+  <el-radio class="firefly" v-model="radio" label="2">备选项</el-radio>
 </template>
 
 <script>
@@ -73,6 +73,31 @@
 ```
 :::
 
+### 禁用状态(firefly)
+
+单选框不可用的状态。
+
+:::demo
+
+```html
+<template>
+  <el-radio class="firefly" v-model="radio" disabled label="1">备选项</el-radio>
+  <el-radio class="firefly" v-model="radio" disabled label="2">备选项</el-radio>
+</template>
+
+<script>
+  export default {
+    data () {
+      return {
+        radio: '1'
+      };
+    }
+  }
+</script>
+```
+:::
+
+
 ### 单选框组
 
 适用于在多个互斥的选项中选择的场景
@@ -85,6 +110,33 @@
     <el-radio :label="3">备选项</el-radio>
     <el-radio :label="6">备选项</el-radio>
     <el-radio :label="9">备选项</el-radio>
+  </el-radio-group>
+</template>
+
+<script>
+  export default {
+    data () {
+      return {
+        radio: 3
+      };
+    }
+  }
+</script>
+```
+:::
+
+### 单选框组(firefly)
+
+适用于在多个互斥的选项中选择的场景
+
+:::demo 结合`el-radio-group`元素和子元素`el-radio`可以实现单选组，在`el-radio-group`中绑定`v-model`，在`el-radio`中设置好`label`即可，无需再给每一个`el-radio`绑定变量，另外，还提供了`change`事件来响应变化，它会传入一个参数`value`。
+
+```html
+<template>
+  <el-radio-group v-model="radio">
+    <el-radio class="firefly" :label="3">备选项</el-radio>
+    <el-radio class="firefly" :label="6">备选项</el-radio>
+    <el-radio class="firefly" :label="9">备选项</el-radio>
   </el-radio-group>
 </template>
 

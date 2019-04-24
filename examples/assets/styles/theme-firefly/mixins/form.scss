@@ -1,0 +1,36 @@
+@import '../../../../../packages/theme-chalk/src/common/var';
+@import '../../../../../packages/theme-chalk/src/mixins/config';
+@import "mixins";
+@mixin radioAndCheckbox($type) {
+  height: 34px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  .#{$namespace + '-' + $type + $element-separator + 'input'} {
+    display: none;
+  }
+  @if $type == 'radio' {
+  } @else if $type == 'checkbox' {
+  }
+  &.is-checked{
+    border-color: $--color-primary;
+  }
+  &:not(.is-disabled):hover{
+    .#{$namespace + '-' + $type + $element-separator + 'label'} {
+      color: $--color-primary;
+    }
+  }
+  &.is-checked.is-disabled{
+    $--color-primary-disabled: lighten($--color-primary, 15%);
+    border-color: $--color-primary-disabled;
+    background-color: rgba(233, 243, 254, 0.6);
+    .#{$namespace + '-' + $type + $element-separator + 'label'}{
+      color: $--color-primary-disabled;
+    }
+    &:after{
+      @include absoluteModal;
+      background-repeat: no-repeat;
+      background-position: 101% 101%;
+    }
+  }
+}

@@ -71,7 +71,7 @@
   "timeline": "./packages/timeline/index.js",
   "timeline-item": "./packages/timeline-item/index.js",
   "divider": "./packages/divider/index.js",
-  "image": "./packages/image/index.js"
+  "image": "./packages/image/index.js",
   "timeline-item": "./packages/timeline-item/index.js",
   "relation-graph": "../packages/relation-graph/index.js",
   "moments": "../packages/moments/index.js",

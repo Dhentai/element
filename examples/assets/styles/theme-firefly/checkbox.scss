@@ -1,9 +1,12 @@
 @import "common/var";
 @import "mixins/mixins";
 @import "mixins/form";
-.el-radio.firefly{
-  @include radioAndCheckbox(radio);
-  padding: 9px 15px 0 5px;
+.el-checkbox.firefly{
+  @include radioAndCheckbox(checkbox);
+  padding: 9px 15px 9px 5px;
+  .el-checkbox__label{
+    line-height: 14px;
+  }
   &.is-checked.is-disabled:after{
     background-image: url('../../../assets/images/is-check-multi.png');
   }

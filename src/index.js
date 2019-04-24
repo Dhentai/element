@@ -263,8 +263,7 @@ export default {
   Timeline,
   TimelineItem,
   Divider,
-  Image
-  TimelineItem,
+  Image,
   RelationGraph,
   Moments,
   FhMap
