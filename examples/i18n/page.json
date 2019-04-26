@@ -3,7 +3,7 @@
     "lang": "zh-CN",
     "pages": {
       "index": {
-        "1": "网站快速成型工具",
+        "1": "烽火广州办 - UED项目组 - 新版前端开发框架",
         "2": "Firefly，一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库",
         "3": "指南",
         "4": "了解设计指南，帮助产品设计人员搭建逻辑清晰、结构合理且高效易用的产品。",
@@ -299,7 +299,6 @@
         "6": "Composants",
         "7": "Découvrez les détails de chaque composant and parcourant les différentes démos. Utilisez l'encapsulation du code pour développer plus efficacement.",
         "8": "Ressources",
-        "9": "Download relevant design resources for shaping page prototype or visual draft, increasing design efficiency.",
         "9": "Téléchargez différents outils de prototypage ou de visualisation pour un design plus efficace.",
         "lang": "fr-FR",
         "titleSize": "34",

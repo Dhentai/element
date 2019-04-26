@@ -35,7 +35,8 @@ const webpackConfig = {
     host: '0.0.0.0',
     port: 8085,
     publicPath: '/', // output.path 的虚拟路径映射
-    noInfo: true // 不输出启动 log
+    noInfo: true, // 不输出启动 log
+    hot: true
   },
   performance: {
     hints: false
@@ -110,6 +111,7 @@ const webpackConfig = {
     ]
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './examples/index.tpl',
       filename: './index.html',

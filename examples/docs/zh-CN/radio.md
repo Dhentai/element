@@ -2,30 +2,6 @@
 
 在一组备选项中进行单选
 
-### 基础用法
-
-由于选项默认可见，不宜过多，若选项过多，建议使用 Select 选择器。
-
-:::demo 要使用 Radio 组件，只需要设置`v-model`绑定变量，选中意味着变量的值为相应 Radio `label`属性的值，`label`可以是`String`、`Number`或`Boolean`。
-
-```html
-<template>
-  <el-radio v-model="radio" label="1">备选项</el-radio>
-  <el-radio v-model="radio" label="2">备选项</el-radio>
-</template>
-
-<script>
-  export default {
-    data () {
-      return {
-        radio: '1'
-      };
-    }
-  }
-</script>
-```
-:::
-
 ### 基础用法(firefly)
 
 单选框正常状态。
@@ -50,22 +26,23 @@
 ```
 :::
 
-### 禁用状态
+### 基础用法
 
-单选框不可用的状态。
+由于选项默认可见，不宜过多，若选项过多，建议使用 Select 选择器。
 
-:::demo 只要在`el-radio`元素中设置`disabled`属性即可，它接受一个`Boolean`，`true`为禁用。
+:::demo 要使用 Radio 组件，只需要设置`v-model`绑定变量，选中意味着变量的值为相应 Radio `label`属性的值，`label`可以是`String`、`Number`或`Boolean`。
+
 ```html
 <template>
-  <el-radio disabled v-model="radio" label="禁用">备选项</el-radio>
-  <el-radio disabled v-model="radio" label="选中且禁用">备选项</el-radio>
+  <el-radio v-model="radio" label="1">备选项</el-radio>
+  <el-radio v-model="radio" label="2">备选项</el-radio>
 </template>
 
 <script>
   export default {
     data () {
       return {
-        radio: '选中且禁用'
+        radio: '1'
       };
     }
   }
@@ -98,26 +75,22 @@
 :::
 
 
-### 单选框组
+### 禁用状态
 
-适用于在多个互斥的选项中选择的场景
+单选框不可用的状态。
 
-:::demo 结合`el-radio-group`元素和子元素`el-radio`可以实现单选组，在`el-radio-group`中绑定`v-model`，在`el-radio`中设置好`label`即可，无需再给每一个`el-radio`绑定变量，另外，还提供了`change`事件来响应变化，它会传入一个参数`value`。
-
+:::demo 只要在`el-radio`元素中设置`disabled`属性即可，它接受一个`Boolean`，`true`为禁用。
 ```html
 <template>
-  <el-radio-group v-model="radio">
-    <el-radio :label="3">备选项</el-radio>
-    <el-radio :label="6">备选项</el-radio>
-    <el-radio :label="9">备选项</el-radio>
-  </el-radio-group>
+  <el-radio disabled v-model="radio" label="禁用">备选项</el-radio>
+  <el-radio disabled v-model="radio" label="选中且禁用">备选项</el-radio>
 </template>
 
 <script>
   export default {
     data () {
       return {
-        radio: 3
+        radio: '选中且禁用'
       };
     }
   }
@@ -137,6 +110,33 @@
     <el-radio class="firefly" :label="3">备选项</el-radio>
     <el-radio class="firefly" :label="6">备选项</el-radio>
     <el-radio class="firefly" :label="9">备选项</el-radio>
+  </el-radio-group>
+</template>
+
+<script>
+  export default {
+    data () {
+      return {
+        radio: 3
+      };
+    }
+  }
+</script>
+```
+:::
+
+### 单选框组
+
+适用于在多个互斥的选项中选择的场景
+
+:::demo 结合`el-radio-group`元素和子元素`el-radio`可以实现单选组，在`el-radio-group`中绑定`v-model`，在`el-radio`中设置好`label`即可，无需再给每一个`el-radio`绑定变量，另外，还提供了`change`事件来响应变化，它会传入一个参数`value`。
+
+```html
+<template>
+  <el-radio-group v-model="radio">
+    <el-radio :label="3">备选项</el-radio>
+    <el-radio :label="6">备选项</el-radio>
+    <el-radio :label="9">备选项</el-radio>
   </el-radio-group>
 </template>
 

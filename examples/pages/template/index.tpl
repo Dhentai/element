@@ -7,7 +7,7 @@
 
     h1 {
       font-size: <%= titleSize >px;
-      margin: 0;
+      /*margin: 0;*/
       line-height: 48px;
       color: #555;
     }

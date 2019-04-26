@@ -7,6 +7,11 @@
   .el-checkbox__label{
     line-height: 14px;
   }
+  &.is-checked:not(.is-disabled){
+    background-image: url('../../../assets/images/is-check-multi.png');
+    background-repeat: no-repeat;
+    background-position: 101% 101%;
+  }
   &.is-checked.is-disabled:after{
     background-image: url('../../../assets/images/is-check-multi.png');
   }

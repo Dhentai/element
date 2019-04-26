@@ -63,6 +63,10 @@
             {
               "path": "/button",
               "title": "Button 按钮"
+            },
+            {
+              "path": "/link",
+              "title": "Link 文字链接"
             }
           ]
         },
@@ -346,6 +350,10 @@
             {
               "path": "/button",
               "title": "Button"
+            },
+            {
+              "path": "/link",
+              "title": "Link"
             }
           ]
         },
@@ -612,6 +620,10 @@
             {
               "path": "/button",
               "title": "Button"
+            },
+            {
+              "path": "/link",
+              "title": "Link"
             }
           ]
         },
@@ -878,6 +890,10 @@
             {
               "path": "/button",
               "title": "Button"
+            },
+            {
+              "path": "/link",
+              "title": "Link"
             }
           ]
         },
