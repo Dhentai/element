@@ -73,7 +73,7 @@
   "link": "./packages/link/index.js",
   "divider": "./packages/divider/index.js",
   "image": "./packages/image/index.js",
-  "timeline-item": "./packages/timeline-item/index.js",
+  "calendar": "./packages/calendar/index.js",
   "relation-graph": "../packages/relation-graph/index.js",
   "moments": "../packages/moments/index.js",
   "fh-map": "../packages/fh-map/index.js"

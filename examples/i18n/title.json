@@ -1,9 +1,9 @@
 {
   "zh-CN": {
     "home": "Firefly - 网站快速成型工具",
-    "guide": "指南 | Element",
-    "component": "组件 | Element",
-    "resource": "资源 | Element"
+    "guide": "指南 | Firefly",
+    "component": "组件 | Firefly",
+    "resource": "资源 | Firefly"
   },
   "en-US": {
     "home": "Element - A Desktop UI Toolkit for Web",

@@ -74,6 +74,7 @@ import TimelineItem from '../packages/timeline-item/index.js';
 import Link from '../packages/link/index.js';
 import Divider from '../packages/divider/index.js';
 import Image from '../packages/image/index.js';
+import Calendar from '../packages/calendar/index.js';
 import RelationGraph from '../packages/relation-graph/index.js';
 import Moments from '../packages/moments/index.js';
 import FhMap from '../packages/fh-map/index.js';
@@ -151,6 +152,7 @@ const components = [
   Link,
   Divider,
   Image,
+  Calendar,
   RelationGraph,
   Moments,
   FhMap,
@@ -188,7 +190,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  version: '2.7.2',
+  version: '2.8.2',
   locale: locale.use,
   i18n: locale.i18n,
   install,
@@ -267,6 +269,7 @@ export default {
   Link,
   Divider,
   Image,
+  Calendar,
   RelationGraph,
   Moments,
   FhMap
