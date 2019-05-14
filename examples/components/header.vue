@@ -306,7 +306,7 @@
           </li>
           <li 
             class="nav-item"
-            v-if="showThemeConfigurator"
+            v-if="$isEle"
           >
             <router-link
               active-class="active"
@@ -351,7 +351,7 @@
           </li>
 
           <!-- 语言选择器 -->
-          <li class="nav-item lang-item" v-show="!inLocal || showLanguage">
+          <li class="nav-item lang-item">
             <el-dropdown
               trigger="click"
               class="nav-dropdown nav-lang"
@@ -376,7 +376,7 @@
           
           <!--theme picker-->
           <li class="nav-item nav-theme-switch" v-show="isComponentPage">
-            <theme-picker v-if="!showThemeConfigurator"></theme-picker>
+            <theme-picker v-if="!$isEle"></theme-picker>
           </li>
         </ul>
       </div>
@@ -412,7 +412,7 @@
           'fr-FR': 'Français'
         },
         showThemeConfigurator: false,
-        showLanguage: false,
+        showLanguage: true,
         inLocal
       };
     },
@@ -451,6 +451,14 @@
             console.error(err);
           });
       }
+      getVars()
+        .then(() => {
+          this.$isEle = true;
+          ga('send', 'event', 'DocView', 'Inner');
+        })
+        .catch((err) => {
+          console.error(err);
+        });
     },
     methods: {
       switchVersion(version) {
